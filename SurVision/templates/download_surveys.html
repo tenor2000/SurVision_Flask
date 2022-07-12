@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block title %}
+    Download Survey Files Page
+{% endblock %}
+
+{% block content %}
+<body class="text-center">
+    <div class="position-relative overflow-hidden p-0 p-md-0 m-md-0 text-center bg-dark" style="color:white">
+        <div class="col-md-10 p-lg-10 mx-auto my-10">
+            <h1 class="display-8 font-weight-normal">Your Surveys are ready for download</h1>
+            <p class="lead font-weight-normal">Please review the files and rename any files that don't seem to fit.</p>
+        </div>
+        <div class="product-device box-shadow d-none d-md-block"></div>
+        <div class="product-device product-device-2 box-shadow d-none d-md-block"></div>
+    </div>
+    <br>
+    <div class="container">
+        <div class="text-center">
+            <a class="btn btn-success" href="{{ url_for('download_surveys') }}">Download</a>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+{% endblock %}

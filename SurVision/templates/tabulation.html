@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block title %}
+    Tabulation Page
+{% endblock %}
+
+{% block content %}
+<body class="text-center">
+    <div class="position-relative overflow-hidden p-0 p-md-0 m-md-0 text-center bg-dark" style="color:white">
+        <div class="col-md-10 p-lg-5 mx-auto my-10">
+            <h1 class="display-8 font-weight-normal">Tabulate with SurVision</h1>
+            <p class="lead font-weight-normal">Select directory to be tabulated</p>
+        </div>
+        <div class="product-device box-shadow d-none d-md-block"></div>
+        <div class="product-device product-device-2 box-shadow d-none d-md-block"></div>
+    </div>
+    <br>
+    <div class="container">
+        <form action = "http://localhost:5000/img_extract" method = "POST" enctype = "multipart/form-data">
+            <input type="file" id="myFile" name="file" accept=".pdf">
+            <input type="submit">
+        </form>
+    </div>
+</body>
+{% endblock %}
