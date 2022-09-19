@@ -1,9 +1,7 @@
 import os
 import cv2
-#from pdf2image import convert_from_path
 import numpy as np
-#import pandas as pd
-#from PIL import ImageTk, Image
+
 import pytesseract  # for reading the form ID #
 
 # still having trouble finding relative route

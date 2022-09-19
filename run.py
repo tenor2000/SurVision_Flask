@@ -1,4 +1,4 @@
-from program import app
+from SurVision import app
 
 #Checks if the run.py file has executed directly and not imported
 if __name__ == '__main__':

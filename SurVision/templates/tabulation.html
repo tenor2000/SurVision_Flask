@@ -15,9 +15,20 @@
     </div>
     <br>
     <div class="container">
-        <form action = "http://localhost:5000/img_extract" method = "POST" enctype = "multipart/form-data">
-            <input type="file" id="myFile" name="file" accept=".pdf">
-            <input type="submit">
+        <br><p class="lead font-weight-normal">Step 1. Select a Survey Key</p>
+        <form action = "{{ url_for('tabulate_surveys') }}" method = "POST" enctype = "multipart/form-data">
+            <select name= 'survey_key' method="POST" id="survey key select">
+                <option value= "choose key" SELECTED>--Choose Key--</option>
+                {% for survey_key in survey_keys %}
+                    <option value= "{{ survey_key }}">{{ survey_key }}</option>
+                {% endfor %}
+            </select>
+        <br><p class="lead font-weight-normal">Step 2. Select all the files to be tabulated</p>
+            <input type="file" id="myFile" name="files[]" multiple accept=".png">
+            <br>
+            <br>
+            <p class="lead font-weight-normal">Step 3. To start, press the Begin Tabulating button</p>
+            <input type="submit" value = "Begin Tabulating">
         </form>
     </div>
 </body>

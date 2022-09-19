@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block title %}
+    Tabulating
+{% endblock %}
+
+{% block content %}
+<body class="text-center">
+    <div class="container">
+        <br>
+        <p class="lead font-weight-normal">Image here</p>
+            {% for survey in survey_directory %}
+                <img src= "{{ src }}{{ survey }}" alt = "{{ survey }}"/>
+            {% endfor %}
+    </div>
+</body>
+{% endblock %}
+
